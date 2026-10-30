@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aagames33.com/sitemap.xml
