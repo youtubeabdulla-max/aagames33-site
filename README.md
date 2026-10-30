@@ -36,8 +36,21 @@ as WebP. Icons and screenshots match the live App Store listings on 30 Oct 2026.
   `python3 -m http.server 8433` from this folder, then <http://localhost:8433>. Check phone width (375 px) too.
 - Publish: commit to `main` and `git push` (remote `git@github.com:youtubeabdulla-max/aagames33-site.git`,
   SSH; HTTPS pushes stop at a username prompt). Pages rebuilds in about a minute.
-- DNS is at Cloudflare and all records are "DNS only" (grey cloud): apex `A` 185.199.108.153,
-  185.199.109.153, 185.199.110.153, 185.199.111.153; `www` CNAME `youtubeabdulla-max.github.io`;
-  `_github-pages-challenge-youtubeabdulla-max` TXT (domain verification). The `api` and
-  `_acme-challenge.api` records belong to the game backend: never change them from here.
+- DNS is at Cloudflare and all records are "DNS only" (grey cloud). The website's records: apex `A`
+  185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153; `www` CNAME
+  `youtubeabdulla-max.github.io`; `_github-pages-challenge-youtubeabdulla-max` TXT (domain verification).
+- Records in the zone that are **not** the website's. Never change them from here:
+  - game backend: `api` (A, AAAA) and `_acme-challenge.api` (CNAME to Fly)
+  - Carrom Crew's own server: `carrom-server` (A, AAAA) and `_acme-challenge.carrom-server` (CNAME to Fly)
+  - e-mail (Cloudflare Email Routing, support@aagames33.com forwards to youtubeabdulla@gmail.com):
+    3 MX `route1/2/3.mx.cloudflare.net`, apex TXT `v=spf1 include:_spf.mx.cloudflare.net ~all`,
+    TXT `cf2024-1._domainkey`. Moves to Google Workspace only when the owner's Workspace setup shows its
+    MX step, exactly as Google says.
+  - apex TXT `google-site-verification=...` (the owner's Google Workspace verification)
 - `app-ads.txt` stays on `youtubeabdulla-max.github.io` (the stores list that address); don't add one here.
+
+## Text to update later
+
+- RIFT: World Rush page (`rift-world-rush/index.html`), feature line "No account, no sign-in, plays offline":
+  true today, but RIFT is joining the shared game backend. When RIFT ships accounts / sign-in, change or
+  remove that line (check the RIFT store listing at the time for the right wording).

@@ -94,6 +94,12 @@ Upload a new file with **exactly the same name** into the same folder (for examp
 `shot-2.png` and change `shot-2.webp` to `shot-2.png` in the game's `index.html`.
 Phone screenshots should be tall (portrait); banners are 1024 x 500.
 
+## Text to update later
+
+- **RIFT: World Rush** page: the feature line "No account, no sign-in, plays offline" is true today. RIFT is
+  joining the shared game backend, so when RIFT gets accounts or sign-in, change or remove that line in
+  `rift-world-rush/index.html`.
+
 ## Made a mistake?
 
 Nothing is lost: GitHub keeps every version. Open the file, click **History**, open the version from before
@@ -108,7 +114,12 @@ can preview the change, commit it and push it over SSH (see `README.md`).
 ## Please don't touch
 
 - `CNAME`: it holds `aagames33.com`. Deleting it takes the site off your domain.
-- The DNS records at Cloudflare for `aagames33.com`: the four `A` records, `www`, the
-  `_github-pages-challenge-youtubeabdulla-max` TXT record, and the `api` records the game server uses.
+- The DNS records at Cloudflare for `aagames33.com`:
+  - the website's: the four `A` records, `www`, and the `_github-pages-challenge-youtubeabdulla-max` TXT
+  - the game backend's: `api` and `_acme-challenge.api`
+  - Carrom Crew's own server: `carrom-server` and `_acme-challenge.carrom-server`
+  - e-mail for support@aagames33.com: the three `MX` records, the `v=spf1 ...` TXT and the
+    `cf2024-1._domainkey` TXT (Cloudflare Email Routing)
+  - the `google-site-verification` TXT (your Google Workspace)
 - `app-ads.txt` does **not** live on this site. It stays at `youtubeabdulla-max.github.io/app-ads.txt`
   because the store listings point to that address. Moving it is a separate, planned change.
