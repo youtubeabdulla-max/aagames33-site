@@ -80,6 +80,13 @@ The store links, ready to use:
    `<div class="skin-empty">` and end with `</div>`) once your first skin is in.
 5. Commit. For more skins, paste more 4-line blocks one under another.
 
+## Change the contact e-mail
+
+The address is on every page (the Contact box, the footer, and the Help box on each game page): 7 files,
+`index.html`, `404.html` and the 5 game pages. In each file, replace the old address everywhere it appears
+(it is written twice on some lines: once after `mailto:` and once as the visible text). The quickest way is
+to ask Claude: "change the contact e-mail on aagames33.com to ...".
+
 ## Replace a screenshot, icon or banner
 
 Upload a new file with **exactly the same name** into the same folder (for example

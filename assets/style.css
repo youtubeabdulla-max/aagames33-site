@@ -267,6 +267,7 @@ a.store:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0, 0, 0
   .logo { font-size: 1.15rem; }
   .logo img { width: 32px; height: 32px; }
   .nav a { padding: 6px 8px; font-size: .92rem; }
+  .nav .nav-about { display: none; } /* About is still on the home page; phones keep Games, Support, Contact */
   .game-top { grid-template-columns: 1fr; }
   .game-icon { width: 96px; height: 96px; }
   .icon-pile { gap: 12px; max-width: 320px; }
